@@ -4,5 +4,11 @@ const nameInTitle = document.querySelector("#name-output");
 input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-    nameInTitle.textContent = event.currentTarget.value;
+    const name = event.currentTarget.value;
+    
+    nameInTitle.textContent = name;
+
+    if (name === "") {
+        nameInTitle.textContent = "Anonymous";
+    };
 };
