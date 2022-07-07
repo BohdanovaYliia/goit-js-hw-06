@@ -10,8 +10,6 @@ const refs = {
 }
 
 let amount;
-let width = 30;
-let height = 30;
 
 refs.inputEl.addEventListener('input', onInputChange);
 refs.createBtn.addEventListener('click', onClickCreateBoxes);
@@ -26,7 +24,9 @@ function onClickCreateBoxes() {
 };
 
 function createBoxes(amount) {
-  const divArray = [];
+    const divArray = [];
+    let width = 30;
+    let height = 30;
     
   for (let i = 0; i < amount; i += 1) {
       const color = getRandomHexColor();
@@ -47,5 +47,6 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
     refs.boxesContainer.innerHTML = "";
+
 };
 
